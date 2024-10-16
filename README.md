@@ -22,6 +22,11 @@ Scripts and Tasks for Hivestorm
 ## Firewall 
 ### Firewall Status
     Get-LocalUser | Select-Object Name, PasswordLastSet, PasswordNeverExpires
+
+
+    Get-NetFirewallProfile
+
+    
 ### Enable firewall for all profiles
     Set-NetFirewallProfile -Profile Domain,Public,Private -Enabled True
 #### Explanation:
@@ -58,6 +63,7 @@ Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | S
 ### BE CAREFUL ONLY PUT specific software name in SoftwareName!!!
 ### Uninstall unauthorized software
 Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name = 'SoftwareName'" | ForEach-Object { $_.Uninstall() }
+
 
 
 
