@@ -1,6 +1,13 @@
 # Hivestorm
 Scripts and Tasks for Hivestorm
 
+## Windows Update
+### Check for available updates
+    Get-WindowsUpdate
+### Install all available updates
+    Install-WindowsUpdate -AcceptAll -AutoReboot
+
+    
 ## Users
 
 ### Unauthorized Users
