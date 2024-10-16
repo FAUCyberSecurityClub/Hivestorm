@@ -39,6 +39,14 @@ Set-NetFirewallProfile: This cmdlet modifies the settings of the Windows Firewal
 ## Network Ports    
 ### Nmap Open Ports
     nmap -sV -O <VM_IP_Address>
+### Do the next three commands in a sequence if you can.    
+### List open ports
+    Get-NetTCPConnection | Select-Object LocalAddress, LocalPort, State
+### Disable a service
+    Stop-Service -Name "ServiceName"
+### Disable a service at Startup
+    Set-Service -Name "ServiceName" -StartupType Disabled
+
 
 ## Windows Defender    
 ### Windows Defender QuickScan
