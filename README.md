@@ -9,6 +9,9 @@ Scripts and Tasks for Hivestorm
 
 ![Screenshot 2024-10-16 at 12 58 17 AM](https://github.com/user-attachments/assets/d90b15ca-5ddc-4ee7-95e1-4de756853488)
 
+        Get-ADUser -Filter {DoesNotRequirePreAuth -eq $true} -Properties DoesNotRequirePreAuth | Select-Object Name, SamAccountName, UserPrincipalName
+
+
 
 ## Windows Update
 ### Check for available updates
