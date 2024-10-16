@@ -11,6 +11,10 @@ Scripts and Tasks for Hivestorm
     Get-LocalUser | Select-Object Name, PasswordLastSet, PasswordNeverExpires
 ### Get-InstalledModule
     Get-InstalledModule
+### Nmap Open Ports
+    nmap -sV -O <VM_IP_Address>
+### Windows Defender
+    Start-MpScan -ScanType QuickScan
 
 
 
