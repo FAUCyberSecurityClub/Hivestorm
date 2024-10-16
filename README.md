@@ -14,6 +14,10 @@ Scripts and Tasks for Hivestorm
 
 ### Password Policies
     Get-LocalUser | Select-Object Name, PasswordLastSet, PasswordNeverExpires
+
+### Set password to expire after 90 days
+    net accounts /maxpwage:90
+    
 ### Firewall Status
     Get-LocalUser | Select-Object Name, PasswordLastSet, PasswordNeverExpires
 ### Get-InstalledModule
