@@ -62,7 +62,7 @@ Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | S
 
 ### BE CAREFUL ONLY PUT specific software name in SoftwareName!!!
 ### Uninstall unauthorized software
-Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name = 'SoftwareName'" | ForEach-Object { $_.Uninstall() }
+    Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name = 'SoftwareName'" | ForEach-Object { $_.Uninstall() }
 
 
 
