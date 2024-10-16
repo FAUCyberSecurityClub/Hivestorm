@@ -1,6 +1,11 @@
 # Hivestorm
 Scripts and Tasks for Hivestorm
 
+## Example of Priority and Logging Findings
+
+![Screenshot 2024-10-16 at 12 58 17 AM](https://github.com/user-attachments/assets/d90b15ca-5ddc-4ee7-95e1-4de756853488)
+
+
 ## Windows Update
 ### Check for available updates
     Get-WindowsUpdate
