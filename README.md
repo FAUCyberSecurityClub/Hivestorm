@@ -19,6 +19,20 @@ Scripts and Tasks for Hivestorm
 ### Remove an unauthorized user
     Remove-LocalUser -Name "Username"
 
+## Examine Security Settings and Policies
+### Group Policy Settings:
+#### Open Group Policy Editor
+    gpedit.msc
+#### Alternatively, export and review specific policies
+    Get-GPOReport -All -ReportType HTML -Path "C:\GPOReport.html"
+### Audit and Logging:
+#### Enable auditing for logon events
+    AuditPol /set /subcategory:"Logon" /success:enable /failure:enable
+#### Review security logs
+    Get-EventLog -LogName Security -Newest 100
+
+
+
 ## Password
 ### Password Policies
     Get-LocalUser | Select-Object Name, PasswordLastSet, PasswordNeverExpires
