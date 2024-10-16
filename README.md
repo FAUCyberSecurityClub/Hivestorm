@@ -52,5 +52,13 @@ Set-NetFirewallProfile: This cmdlet modifies the settings of the Windows Firewal
 ### Windows Defender QuickScan
     Start-MpScan -ScanType QuickScan
 
+### List installed software
+Get-ItemProperty HKLM:\Software\Microsoft\Windows\CurrentVersion\Uninstall\* | Select-Object DisplayName, DisplayVersion
+
+### BE CAREFUL ONLY PUT specific software name in SoftwareName!!!
+### Uninstall unauthorized software
+Get-WmiObject -Query "SELECT * FROM Win32_Product WHERE Name = 'SoftwareName'" | ForEach-Object { $_.Uninstall() }
+
+
 
 
